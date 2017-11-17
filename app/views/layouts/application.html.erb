@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Peppar</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tonpo-pepper</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/common2.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="http://drive.google.com/uc?export=view&id=0B2pjFe-hdEvEeHM0UzRRNWJXWG8" width="50px" height="auto">
+                <a class="" href="#"><img src="http://drive.google.com/uc?export=view&id=0B2pjFe-hdEvEcWRSN1FmUURtRG8" width="245px" height="auto"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:right">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#"><small style="font-size:12px">Pepperとは</small></a>
+                    </li>
+                    <li>
+                        <a href="#"><small style="font-size:12px">ウリハッキョ支援について</small></a>
+                    </li>
+                    <li>
+                        <a href="#"><small style="font-size:12px">店舗様はこちら</small></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <form class="navbar-form navbar-right search-form" role="search" style="margin-right:10%">
+                <input type="text" class="form-control" placeholder="例：焼肉　安い">
+                <button type="submit" class="btn btn-primary">検索</button>
+            </form>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<%= yield %>
+
+</body>
+</html>
