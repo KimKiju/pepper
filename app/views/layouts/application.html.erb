@@ -49,14 +49,23 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:right">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#"><small style="font-size:12px">Pepperとは</small></a>
+                        <a href="#"><small style="font-size:11px">Pepperとは</small></a>
                     </li>
                     <li>
-                        <a href="#"><small style="font-size:12px">ウリハッキョ支援について</small></a>
+                        <a href="#"><small style="font-size:11px">ウリハッキョ支援について</small></a>
                     </li>
                     <li>
-                        <a href="#"><small style="font-size:12px">店舗様はこちら</small></a>
+                        <a href="#"><small style="font-size:11px">店舗様はこちら</small></a>
                     </li>
+                    <% if user_signed_in? %>
+                    <li>
+                        <%= link_to "ログアウト", '/users/sign_out',method: :delete,class: "small",style: "font-size: 11px;" %>
+                    </li>
+                    <% else %>
+                    <li>
+                        <a href="/users/sign_in"><small style="font-size:11px">ログイン</small></a>
+                    </li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -67,6 +76,8 @@
         </div>
         <!-- /.container -->
     </nav>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
 <%= yield %>
 
