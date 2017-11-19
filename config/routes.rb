@@ -5,6 +5,12 @@ Rails.application.routes.draw do
           get 'result'
         end
     end
+    resources :users, only: [:show]
+    resources :points, except: [:edit,:update,:destroy,:show] do
+        collection do
+          get 'unmatch'
+        end
+    end
     root 'stores#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
