@@ -1,0 +1,85 @@
+  <div class="container" style="margin-top:50px">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header" style="font-size:24px">ポイントを貯める
+                    <small>お会計金額</small>
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+           <%= form_tag('/points',method: :post,:NAME => "form1") do %>
+           <TT>
+           <div class = "col-md-12" style="margin-bottom: 10px; ">
+           <INPUT TYPE="text" class ="form-control" placeholder="お食事代金合計" name="amount" VALUE="" SIZE=26 style="height: 70px; font-size: 30px; text-align: right;">
+           </div>
+
+           <div class="col-md-12" style="margin-bottom: 10px;">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ７ " onClick="calc('7')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ８ " onClick="calc('8')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ９ " onClick="calc('9')">
+           </div>
+           <P>
+           <div class="col-md-12" style="margin-bottom: 10px;">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ４ " onClick="calc('4')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ５ " onClick="calc('5')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ６ " onClick="calc('6')">
+           </div>
+           <P>
+           <div class="col-md-12" style="margin-bottom: 10px;">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" １ " onClick="calc('1')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ２ " onClick="calc('2')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ３ " onClick="calc('3')">
+           </div>
+           <P>
+           <div class="col-md-12" style="margin-bottom: 10px;">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ０ " onClick="calc('0')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" ・ " onClick="calc('.')">
+           <INPUT TYPE="button" class="btn btn-default col-md-4" VALUE=" Ｃ " onClick="calc('C')">
+           </div>
+           </TT>
+           <div class="col-md-12" style="margin-bottom: 10px;">
+           <input type="hidden" name="store_id" value = 1 >
+           <!-- <input type="submit" value="ポイントを貯める" class="btn btn-warning btn-lg" style="width: 100%"> -->
+           <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal" style="width: 100%">
+               ポイントを貯める
+           </button>
+           </div>
+
+           <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">店舗側承認</h4>
+                  </div>
+                  <div class="modal-body">
+                    <input type="password" class ="form-control" name="pass" placeholder="店舗パスコードを入力" style="height: 50px; font-size: 30px; text-align: right;">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" value="承認する" class="btn btn-primary" >
+                  </div>
+                </div>
+              </div>
+            </div>
+           <% end %>
+        </div>
+  </div>
+
+<SCRIPT LANGUAGE="JavaScript">
+    <!--
+        function calc(ch) {
+      if (ch == "=") {
+    document.form1.amount.value =
+        eval(document.form1.amount.value);
+      } else if (ch == "C") {
+    document.form1.amount.value = "";
+      } else {
+    document.form1.amount.value += ch;
+      }
+        }
+    // --> JavaScript対応ブラウザでないと動作しません。
+    </SCRIPT>
