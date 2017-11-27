@@ -2,13 +2,14 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h4 class="page-header" style="font-size:24px">ポイントを貯める
+                <h4 class="page-header" style="font-size:24px">ポイントを送る
                     <small>お会計金額</small>
                 </h4>
             </div>
         </div>
 
         <div class="row">
+
            <%= form_tag('/points',method: :post,:NAME => "form1") do %>
            <TT>
            <div class = "col-md-12" style="margin-bottom: 10px; ">
@@ -43,8 +44,17 @@
            <input type="hidden" name="store_id" value = 1 >
            <!-- <input type="submit" value="ポイントを貯める" class="btn btn-warning btn-lg" style="width: 100%"> -->
            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal" style="width: 100%">
-               ポイントを貯める
+               ポイントを送る
            </button>
+           <div style="margin-top: 30px;">
+           <h3 style="font-weight: bold;">美味しいがコマ達の笑顔に</h3>
+           <p>・トンポペッパー加盟店での飲食代金の一部が<b>周辺地域のウリハッキョ</b>へ送られます。
+           <br>・<b>１ポイント＝１円</b>として地域ウリハッキョの<b>書籍代の一部</b>に充てられます。
+           <br>・<b>お食事代金合計金額を入力</b>して頂くと自動的にポイントが算出されます。
+           <br>・お食事代金合計金額を入力後、<b>店員にパスコードを入力してもらい</b>ポイント送信完了です。
+           <br>・ポイントの回収及び分配はトンポペッパーが責任を持って執り行います。</p>
+           <h4 style="font-weight: bold;">さあ。ウリハッキョのために！</h4>
+           </div>
            </div>
 
            <!-- Modal -->
