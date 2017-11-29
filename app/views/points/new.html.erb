@@ -12,8 +12,9 @@
 
            <%= form_tag('/points',method: :post,:NAME => "form1") do %>
            <TT>
-           <div class = "col-md-12" style="margin-bottom: 10px; ">
-           <INPUT TYPE="text" class ="form-control" placeholder="お食事代金合計" name="amount" VALUE="" SIZE=26 style="height: 70px; font-size: 30px; text-align: right;">
+           <div class = "col-md-12 form-inline" style="margin-bottom: 10px; ">
+           <INPUT TYPE="text" class ="form-control" placeholder="お名前" name="nickname" VALUE="" style="height: 70px; width: 49.82%; font-size: 30px; text-align: right;">
+           <INPUT TYPE="text" class ="form-control" placeholder="お食事代金合計" name="amount" VALUE="" style="height: 70px; width: 49.82%; font-size: 30px; text-align: right;">
            </div>
 
            <div class="col-md-12" style="margin-bottom: 10px;">
@@ -47,7 +48,7 @@
                ポイントを送る
            </button>
            <div style="margin-top: 30px;">
-           <h3 style="font-weight: bold;">美味しいがコマ達の笑顔に</h3>
+           <h3 style="font-weight: bold;">美味しい。がコマ達の笑顔に</h3>
            <p>・トンポペッパー加盟店での飲食代金の一部が<b>周辺地域のウリハッキョ</b>へ送られます。
            <br>・<b>１ポイント＝１円</b>として地域ウリハッキョの<b>書籍代の一部</b>に充てられます。
            <br>・<b>お食事代金合計金額を入力</b>して頂くと自動的にポイントが算出されます。
@@ -70,7 +71,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <input type="submit" value="承認する" class="btn btn-primary" >
+                    <input type="submit" value="承認する" class="btn btn-primary">
                   </div>
                 </div>
               </div>

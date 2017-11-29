@@ -48,7 +48,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:right">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#"><small style="font-size:11px; color: white;">Pepperとは</small></a>
+                        <a href="#"><small style="font-size:11px; color: white;">トンポペッパーとは</small></a>
                     </li>
                     <li>
                         <a href="#"><small style="font-size:11px; color: white;">ウリハッキョ支援について</small></a>
@@ -56,15 +56,6 @@
                     <li>
                         <a href="#"><small style="font-size:11px; color: white;">店舗様はこちら</small></a>
                     </li>
-                    <% if user_signed_in? %>
-                    <li>
-                        <%= link_to "ログアウト", '/users/sign_out',method: :delete,style: "font-size: 11px; color: white;" %>
-                    </li>
-                    <% else %>
-                    <li>
-                        <a href="/users/sign_in"><small style="font-size:11px color: white;">ログイン</small></a>
-                    </li>
-                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
