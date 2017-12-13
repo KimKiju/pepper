@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :stores do
         collection do
           get 'result'
+          get 'show2'
         end
     end
     resources :users, only: [:show]
